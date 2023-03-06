@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Step Project Cards
 
 
@@ -90,3 +91,60 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+=======
+# Start Template: Gulp-2022
+
+Сборку делал по примеру автора [youtube](https://www.youtube.com/watch?v=jU88mLuLWlk) канала: [Фрилансер по жизни](https://www.youtube.com/c/FreelancerLifeStyle)
+
+## Для работы используйте такие комманды
+
+- Для установки всех зависимостей: `$ npm install`;
+- Для запуска сборщика Gulp нужно использовать: `$ npm run dev`;
+- Для сборки проекта в режиме `"production"`: `$ npm run build`;
+
+## Что делает Gulp?
+
+- сжимает HTML в режиме `production`;
+- удаляет комментарии из HTML в режиме `production`;
+- собирает SCSS файлы, добавляет вендорные префиксы;
+- удаляет комментарии из SCSS файлов;
+- в режиме `production` сжимает CSS и делает копию без сжатия;
+- конвертирует шрифты из `.otf` в `.ttf`, и из `.ttf` в `woff/woff2`;
+- создает файл для подключения шрифтов. Данный файл создается по такому пути: `src/scss/fonts.scss`, выглядит это так:
+
+```scss
+@font-face {
+   font-family: CormorantUpright;
+   font-display: swap;
+   src: url('../fonts/CormorantUpright-Regular.woff2') format('woff2'), url('../fonts/CormorantUpright-Regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+}
+```
+
+### ВНИМАНИЕ
+
+> Если в папке `src/scss` - уже есть файл `fonts.scss` - тогда при добавлении новых шрифтов **НУЖНО УДАЛИТЬ** старый файл `fonts.scss`. Не переживай, при повторном запуске сборки Gulp все новые шрифты сконвертирует и создаст новый файл `fonts.scss`.
+
+Дальше, что еще умеет сборка:
+
+- сжимает изображения и конвертирует их дополнительно в формат `.webp` и подключает их если браузер поддерживает этот формат;
+- копирует папку `/files` с содержимым в финальную сборку. То есть любые файлы можно поместить в эту папку и она будет добавлена в финальную сборку;
+- отдельной коммандой `$ npm run svgSprive` cоздает "svg cпрайты";
+- перед каждым запуском сборщика чистит папкуинальным проектом, чтобы не собирать муссор;
+- отдельной коммандой `$ npm run zip` можно заархивировать финальную папку для заказчика **с именем проекта**;
+- так же для разработи `gulp` запускает сервер с ф с автоматической перезагрузкой окна в браузере при изменении файлов в проекте;
+- отдельной коммандой `$ npm run deployFTP` финальный проект выгружается на хостинг. Опции для отправки проекта на нужный хостинг указываются в файле: `gulp/config/ftp.js`.
+
+## Что делает WebPack?
+
+- именно `webpack` в данной сборке занимается обработкой файлов c JavaScript;
+- поддерживается модульное подключение скриптов `import/export`;
+- при импорте нет необходимости писать расширение файла `.js`, так же если осуществляется импорт из файла `index.js` не обязательно это указывать:
+
+```javascript
+import * as flsFunctions from './modules'; // './modules/index.js'
+```
+
+## Финал
+>>>>>>> c797904 (first commit)
