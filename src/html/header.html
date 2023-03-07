@@ -1,3 +1,53 @@
-<header>
-   <h1>HEADER</h1>
+<header class="header">
+	<div class="logo">
+		<img src="logo.png" alt="Logo" />
+	</div>
+	<div class="actions">
+		<button class="login-btn">Вхід</button>
+		<button class="create-visit-btn hidden">Створити візит</button>
+	</div>
 </header>
+<main class="main">
+	<h2 class="board-message board-message-none">No items have been added</h2>
+	<div class="filters">
+		<form>
+			<div class="">
+				<label for="">Заголовок/Вміст візиту</label>
+				<input type="text" placeholder="Пошук" />
+			</div>
+			<div class="">
+				<label for="">Статус</label>
+				<select name="status">
+					<option value=""></option>
+					<option value="scheduled">Заплановано</option>
+					<option value="completed">Завершено</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="">Терміновість</label>
+				<select name="urgency">
+					<option value=""></option>
+					<option value="urgent">Терміново</option>
+					<option value="norm-urgent">Нормально</option>
+					<option value="not-urgent">Не терміново</option>
+				</select>
+			</div>
+			<button type="submit">Фільтрувати</button>
+		</form>
+	</div>
+	<div class="cards">
+		<div class="card">
+			<div class="card-info">
+				<h2>П.І.Б.</h2>
+				<p>Лікар</p>
+				<div>
+					<button class="show-more-btn">Показати більше</button>
+					<button class="edit-btn">Редагувати</button>
+				</div>
+				<div class="icon">
+					<span class="delete-icon"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
