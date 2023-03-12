@@ -1,0 +1,74 @@
+.header {
+  //height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.actions button.login-btn {
+  background-color: #2196f3;
+
+  &.deactive {
+    display: none;
+  }
+}
+
+.create-visit-btn {
+  display: flex;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.password-form {
+  display: none;
+
+  &.visible {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.visit-form {
+  display: none;
+
+  &.visible {
+    display: flex;
+  }
+}
+
+.visit-form-info {
+  display: none;
+
+  &.visible {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.error {
+  color: red;
+}

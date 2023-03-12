@@ -6,48 +6,40 @@
 		<button class="login-btn">Вхід</button>
 		<button class="create-visit-btn hidden">Створити візит</button>
 	</div>
-</header>
-<main class="main">
-	<h2 class="board-message board-message-none">No items have been added</h2>
-	<div class="filters">
-		<form>
-			<div class="">
-				<label for="">Заголовок/Вміст візиту</label>
-				<input type="text" placeholder="Пошук" />
-			</div>
-			<div class="">
-				<label for="">Статус</label>
-				<select name="status">
-					<option value=""></option>
-					<option value="scheduled">Заплановано</option>
-					<option value="completed">Завершено</option>
-				</select>
-			</div>
-			<div class="">
-				<label for="">Терміновість</label>
-				<select name="urgency">
-					<option value=""></option>
-					<option value="urgent">Терміново</option>
-					<option value="norm-urgent">Нормально</option>
-					<option value="not-urgent">Не терміново</option>
-				</select>
-			</div>
-			<button type="submit">Фільтрувати</button>
-		</form>
-	</div>
-	<div class="cards">
-		<div class="card">
-			<div class="card-info">
-				<h2>П.І.Б.</h2>
-				<p>Лікар</p>
-				<div>
-					<button class="show-more-btn">Показати більше</button>
-					<button class="edit-btn">Редагувати</button>
-				</div>
-				<div class="icon">
-					<span class="delete-icon"></span>
-				</div>
-			</div>
+
+	<form class="password-form">
+		<div class="entry">
+			<input type="email" placeholder="Email"/>
+			<input type="password" placeholder="Password"/>
 		</div>
-	</div>
-</main>
+		<button type="#" class="submit-btn">Підтвердити</button>
+		<p class="error"></p>
+	</form>
+
+	<form class="visit-form">
+		<label for="">Лікар</label>
+		<select name="doctor" class="doctor">
+			<option value="" disabled selected></option>
+			<option value="cardiologist">Кардіолог</option>
+			<option value="dentist">Стоматолог</option>
+			<option value="therapist">Терапевт</option>
+		</select>
+	</form>
+
+	<form class="visit-form-info">
+		<input type="text" name="purpose" placeholder="Мета візиту">
+		<input type="text" name="description" placeholder="Опис візиту">
+		<input type="text" name="urgency" placeholder="Терміновість">
+		<input type="text" name="name" placeholder="ПІБ">
+		<input type="text" name="pressure" data-extra="cardiologist" placeholder="Звичайний тиск"/>
+		<input type="text" name="index" data-extra="cardiologist" placeholder="Індекс маси тіла"/>
+		<input type="text" name="disease" data-extra="cardiologist" placeholder="Перенесені захворювання серцево-судинної системи"/>
+		<input type="text" name="age" data-extra="cardiologist" placeholder="Вік"/>
+		<input type="text" name="data" data-extra="dentist" placeholder="Дата останнього відвідування"/>
+		<input type="text" name="age" data-extra="therapist" placeholder="Вік"/>
+		<button class="create-button">Створити</button>
+		<button class="create-button close">Закрити</button>
+	</form>
+
+</header>
+
