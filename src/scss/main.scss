@@ -1,0 +1,129 @@
+
+.main {
+  max-width: 1240px;
+  margin: 20px auto;
+}
+
+.board-message {
+  margin-top: 200px;
+  font: bold 40px sans-serif;
+  text-align: center;
+
+  &.board-message-none {
+    display: none;
+  }
+}
+
+.filters form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 16px sans-serif;
+}
+
+.filters input[type='text'],
+.filters select {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.filters button[type='submit'] {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  margin-top: 70px;
+  font: 16px sans-serif;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+  padding-top: 24px;
+}
+
+.card-info button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-btn:after {
+  content: 'Показати більше';
+}
+
+.show-less-btn:after {
+  content: 'Показати меньше';
+}
+
+.edit-btn:after {
+  content: 'Редагувати';
+}
+
+.edit-close-btn:after {
+  content: 'Закрити';
+}
+
+.card-info button:hover {
+  background-color: #0062cc;
+}
+
+.card-info .delete-icon::before {
+  content: '×';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 24px;
+  line-height: 12px;
+  cursor: pointer;
+  color: #555;
+  border: 1px solid #555;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.card-info .delete-icon:hover::before {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.extra-info {
+  display: none;
+  color: blue;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.change-info {
+  display: block;
+  color: #22b652;
+}

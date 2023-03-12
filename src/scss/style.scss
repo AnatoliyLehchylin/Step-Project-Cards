@@ -1,133 +1,16 @@
 @import 'fonts';
+@import 'header';
+@import 'main';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     background: #c3e0f0;
 }
 
-.header {
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f2f2f2;
-    margin: 0 auto;
-}
 
-.logo img {
-    height: 50px;
-}
-
-.actions button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.actions button.login-btn {
-    background-color: #2196f3;
-}
-
-.main {
-    max-width: 1240px;
-    margin: 20px auto;
-}
-
-.board-message {
-    font: bold 40px sans-serif;
-    text-align: center;
-}
-
-.filters form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	font: 16px sans-serif;
-}
-
-.filters input[type='text'],
-.filters select {
-    margin: 0 10px;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-.filters button[type='submit'] {
-    padding: 5px 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: start;
-    margin-top: 70px;
-	font: 16px sans-serif;
-}
-
-.card {
-    width: 300px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;	
-
-}
-
-.card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    position: relative;
-    padding-top: 24px;
-}
-
-.card-info button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.card-info button:hover {
-    background-color: #0062cc;
-}
-
-.card-info .delete-icon::before {
-    content: '×';
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    font-size: 24px;
-    line-height: 12px;
-    cursor: pointer;
-    color: #555;
-    border: 1px solid #555;
-    padding: 4px;
-    border-radius: 4px;
-}
-
-.card-info .delete-icon:hover::before {
-    color: #dc3545;
-    border-color: #dc3545;
-}
