@@ -1,19 +1,12 @@
 import {fetchPUT} from "./Fetch/fetchPUT.js";
-import {cards} from "./variables.js";
-import {ShowAllCards} from "./showAllCards.js";
+import {PaintModifiedCard} from "./paintModifiedCard.js";
 
 
-export async function SaveChangeInfo (objChange){
+export async function SaveChangeInfo (objChange, card){
 
-    await fetchPUT(objChange);
+    const modifiedCard = await fetchPUT(objChange);
 
-   const oldCards = cards.querySelectorAll('.card');
-
-   oldCards.forEach(card => {
-       card.remove();
-   });
-
-   await ShowAllCards();
+    await PaintModifiedCard(modifiedCard, card);
 
 }
 

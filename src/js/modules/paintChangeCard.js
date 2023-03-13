@@ -1,6 +1,6 @@
 import {SaveChangeInfo} from "./saveChangeInfo.js";
 
-export function PaintChangeCard(obj, changeInfo, editBtn) {
+export function PaintChangeCard(obj, changeInfo, editBtn, card) {
 
     let objChange = {};//объект с измененной информацией о визите
 
@@ -51,7 +51,7 @@ export function PaintChangeCard(obj, changeInfo, editBtn) {
         editBtn.classList.toggle('edit-close-btn');
         changeDiv.remove();
 
-        SaveChangeInfo(objChange);
+        SaveChangeInfo(objChange, card);
 
     })
 }

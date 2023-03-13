@@ -13,7 +13,7 @@ cards.addEventListener('click', async e => {
 
             let infoChangeCard = await fetchOneCardGET(e.target.closest('.card').dataset.id);
 
-           await PaintChangeCard(infoChangeCard, e.target.closest('.card-info').firstChild, e.target);
+           await PaintChangeCard(infoChangeCard, e.target.closest('.card-info').firstChild, e.target, e.target.closest('.card'));
 
         } else {
 
