@@ -7,8 +7,6 @@ cards.addEventListener('click', e => {
 
         e.target.closest('.card-info').querySelector('.extra-info').classList.toggle('visible');
 
-        // e.target.parentElement.previousSibling.classList.toggle('visible');
-
         e.target.classList.toggle('show-less-btn');
         e.target.classList.toggle('show-more-btn');
       

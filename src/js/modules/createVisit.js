@@ -6,7 +6,9 @@ import {
     visitInfoValue,
     buttonCreate,
     buttonClose,
-    boardMessage
+    boardMessage,
+    objInfoVisit,
+    urgencySelectList
 } from "./variables.js";
 
 import {
@@ -14,6 +16,7 @@ import {
     createVisitDentist,
     createVisitTherapist
 } from "./createNewCard.js";
+
 
 let doctorSelect;//выбранный доктор
 
@@ -24,9 +27,10 @@ buttonCreateVisit.addEventListener('click', e => {
 
 });
 
+
 doctor.addEventListener('click', e => {
 
-    doctorSelect = e.target.value;
+   doctorSelect = e.target.value;
 
     if (!!doctorSelect) {
         visitFormInfo.classList.add('visible');
@@ -43,6 +47,7 @@ doctor.addEventListener('click', e => {
     }
 });
 
+
 buttonClose.addEventListener('click', e => {
 
     e.preventDefault();
@@ -56,11 +61,18 @@ buttonClose.addEventListener('click', e => {
 
 });
 
+//выбор срочности из дропдауна при создании визита
+urgencySelectList.addEventListener('click', e => {
+
+    objInfoVisit.urgency = e.target.value;
+
+});
+
+
 buttonCreate.addEventListener('click', e => {
 
     e.preventDefault();
-
-    let objInfoVisit = {};//объект с введенной информацией о визите
+    // let objInfoVisit = {};//объект с введенной информацией о визите
 
     objInfoVisit.doctor = doctorSelect;
 
@@ -69,6 +81,7 @@ buttonCreate.addEventListener('click', e => {
         if (!!elem.value) {
             objInfoVisit[`${elem.name}`] = elem.value
         }
+
     });
 
     (doctorSelect === 'dentist' && createVisitDentist(objInfoVisit)) || (doctorSelect === 'therapist' && createVisitTherapist(objInfoVisit)) || (doctorSelect === 'cardiologist' && createVisitCardiologist(objInfoVisit))

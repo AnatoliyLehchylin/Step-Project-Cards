@@ -17,6 +17,7 @@ export function PaintModifiedCard(obj, card) {
 
     const doctorName = document.createElement('div');
     cardInfo.append(doctorName);
+    doctorName.classList.add('doctor-name');
     doctorName.innerText = obj.doctor;
 
     const moreInfo = document.createElement('div');

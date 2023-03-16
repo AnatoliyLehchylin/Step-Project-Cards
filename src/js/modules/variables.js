@@ -17,8 +17,14 @@ export const doctor = document.querySelector('.doctor');//список докт�
 
 export const visitFormInfo = document.querySelector('.visit-form-info');//форма информации о визите
 export const visitInfoValue = visitFormInfo.querySelectorAll('input');//значения информации о визите
+export const urgencySelectList = document.querySelector('.urgency-select');//список значений срочности визита
+export const objInfoVisit = {};//объект с введенной информацией о визите
 
 export const buttonCreate = document.querySelector('.create-button');//отправить форму информации о визите
 export const buttonClose = document.querySelector('.close');//закрыть форму информации о визите
 
 export const cards = document.querySelector('.cards');//поле отрисовки карточек
+
+export const filters = document.querySelector('.filters');//фильтры
+
+

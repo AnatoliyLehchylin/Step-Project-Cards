@@ -1,5 +1,6 @@
 import {cards} from "./variables.js";
 
+
 export function PaintCard(obj) {
 
     const card = document.createElement('div');
@@ -21,6 +22,7 @@ export function PaintCard(obj) {
 
     const doctorName = document.createElement('div');
     cardInfo.append(doctorName);
+    doctorName.classList.add('doctor-name');
     doctorName.innerText = obj.doctor;
 
     const moreInfo = document.createElement('div');

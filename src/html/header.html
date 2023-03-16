@@ -29,7 +29,17 @@
 	<form class="visit-form-info">
 		<input type="text" name="purpose" placeholder="Мета візиту">
 		<input type="text" name="description" placeholder="Опис візиту">
-		<input type="text" name="urgency" placeholder="Терміновість">
+<!--		-->
+		<div>
+			<label for="">Терміновість</label>
+			<select name="urgency" class="urgency-select">
+				<option value="" disabled selected ></option>
+				<option value="emergency">Терміново</option>
+				<option value="normal">Нормально</option>
+				<option value="not-urgent">Не терміново</option>
+			</select>
+		</div>
+<!--		<input type="text" name="urgency" placeholder="Терміновість">-->
 		<input type="text" name="name" placeholder="ПІБ">
 		<input type="text" name="pressure" data-extra="cardiologist" placeholder="Звичайний тиск"/>
 		<input type="text" name="index" data-extra="cardiologist" placeholder="Індекс маси тіла"/>

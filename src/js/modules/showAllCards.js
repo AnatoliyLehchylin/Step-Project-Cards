@@ -1,8 +1,15 @@
+import {
+    boardMessage,
+    filters
+} from "./variables.js";
 import {fetchAllCardsGET} from "./Fetch/fetchGET.js";
 import {PaintCard} from "./paintCard.js";
-import {boardMessage} from "./variables.js";
+import {Loader} from "./loader.js";
+
 
 export async function ShowAllCards() {
+
+    await Loader(filters, 'DOWNLOAD CARDS...');
 
     const all = await fetchAllCardsGET();
 
@@ -10,7 +17,7 @@ export async function ShowAllCards() {
 
     all.forEach(elem => {
 
-        PaintCard(elem);
+        setTimeout(PaintCard, 400, elem);
 
     })
 
