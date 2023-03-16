@@ -12,12 +12,14 @@ import {fetchLOGIN} from "./Fetch/fetchLOGIN.js";
 let emailInput;//введенная почта
 let passwordInput;//введенный пароль
 
+
 buttonEntry.addEventListener('click', e => {
 
     passwordForm.classList.add('visible');
 
     buttonEntry.classList.add('deactive');
 });
+
 
 inputsEmailPassword.forEach(input => {
 
@@ -32,6 +34,7 @@ inputsEmailPassword.forEach(input => {
         } else passwordInput = e.target.value;
     })
 });
+
 
 buttonEntrySubmit.addEventListener('click', async e => {
 
@@ -48,6 +51,8 @@ buttonEntrySubmit.addEventListener('click', async e => {
     } else error.innerText = 'Помилка у email або password!'
 })
 
+
+//авторизация без запросов на сервер, по заранее известной почте и паролю.
 
 // buttonEntrySubmit.addEventListener('click', e => {
 //

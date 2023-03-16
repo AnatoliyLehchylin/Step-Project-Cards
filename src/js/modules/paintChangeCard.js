@@ -1,8 +1,9 @@
 import {SaveChangeInfo} from "./saveChangeInfo.js";
 
+
 export function PaintChangeCard(obj, changeInfo, editBtn, card) {
 
-    let objChange = {};//объект с измененной информацией о визите
+    const objChange = {};//объект с измененной информацией о визите
 
     //    отрисовка формы для изменения информации
 
