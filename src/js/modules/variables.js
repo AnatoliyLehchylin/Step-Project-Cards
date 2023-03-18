@@ -26,5 +26,6 @@ export const buttonClose = document.querySelector('.close');//закрыть ф�
 export const cards = document.querySelector('.cards');//поле отрисовки карточек
 
 export const filters = document.querySelector('.filters');//фильтры
-
-
+export const filterButton = document.querySelector('.filter-button');//кнопка фильтрации
+export const filterValue = filters.querySelectorAll('input');//значения в инпутах фильтрации
+export const urgencyFilterList = filters.querySelector('.urgency-filter');//список значений срочности визита на фильтре

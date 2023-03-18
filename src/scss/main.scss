@@ -29,13 +29,21 @@
   border: 1px solid #ccc;
 }
 
-.filters button[type='submit'] {
+.filter-button[type='submit'] {
   padding: 5px 10px;
   background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #105712;
+  }
+
+  &.reset-button {
+    background-color: #a64141;
+  }
 }
 
 .cards {
@@ -49,10 +57,11 @@
 
 .card {
   width: 300px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #cbd1e8;
+  border: 1px solid #4e609d;
   border-radius: 5px;
   padding: 10px;
+  margin: 5px;
 }
 
 .card-info {
@@ -102,8 +111,8 @@
   font-size: 24px;
   line-height: 12px;
   cursor: pointer;
-  color: #555;
-  border: 1px solid #555;
+  color: #1c1a1a;
+  border: 1px solid #1c1a1a;
   padding: 4px;
   border-radius: 4px;
 }
@@ -196,4 +205,11 @@ to {
     box-shadow: inset #b3dfd8 0 0 0 17px;
     transform: rotate(140deg);
   }
+}
+
+input,
+select
+{
+  border: solid 0.5px #ecebf1;
+  background-color: #f9f8fc;
 }

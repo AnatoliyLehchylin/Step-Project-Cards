@@ -1,4 +1,5 @@
 // import {Token} from "../variables.js";
+import {allActualCards} from "../showAllCards.js";
 
 export async function fetchPOST(obj) {
 
@@ -13,6 +14,8 @@ export async function fetchPOST(obj) {
         });
 
         const queryJSON = await queryPOST.json();
+
+        allActualCards.push(queryJSON);//добавление карточки в массив актуальных карт
 
         return queryJSON.id;
 

@@ -3,27 +3,28 @@
   <div class="filters">
     <form>
       <div class="">
-        <label for="">Заголовок/Вміст візиту</label>
-        <input type="text" placeholder="Пошук" />
+        <label for="">Мета візиту</label>
+        <input name="purpose" type="text" placeholder="Пошук" />
       </div>
       <div class="">
-        <label for="">Статус</label>
-        <select name="status">
-          <option value=""></option>
-          <option value="scheduled">Заплановано</option>
-          <option value="completed">Завершено</option>
-        </select>
+        <label for="">Лікар</label>
+        <input name="doctor" type="text" placeholder="Пошук" />
+<!--        <select name="status">-->
+<!--          <option value=""></option>-->
+<!--          <option value="scheduled">Заплановано</option>-->
+<!--          <option value="completed">Завершено</option>-->
+<!--        </select>-->
       </div>
       <div class="">
         <label for="">Терміновість</label>
-        <select name="urgency">
+        <select name="urgency" class="urgency-filter">
           <option value=""></option>
-          <option value="urgent">Терміново</option>
-          <option value="norm-urgent">Нормально</option>
+          <option value="emergency">Терміново</option>
+          <option value="normal">Нормально</option>
           <option value="not-urgent">Не терміново</option>
         </select>
       </div>
-      <button type="submit">Фільтрувати</button>
+      <button class="filter-button" type="submit">Фільтрувати</button>
     </form>
   </div>
   <div class="loader">
