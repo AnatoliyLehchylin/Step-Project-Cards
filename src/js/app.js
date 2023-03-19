@@ -3,6 +3,7 @@ import './modules/createVisit.js';
 import './modules/deleteCard.js';
 import './modules/showMoreInfo.js';
 import './modules/changeInfoCard.js';
+import './modules/filters.js';
 
 $(window).on("load", function() {
     $(".loader_inner").fadeOut();

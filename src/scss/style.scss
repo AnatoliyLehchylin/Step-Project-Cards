@@ -3,14 +3,17 @@
 @import 'main';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
 }
 
 body {
-    background: #c3e0f0;
+  background-image: url(../img/4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
