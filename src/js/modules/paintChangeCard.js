@@ -20,7 +20,6 @@ export function PaintChangeCard(obj, changeInfo, editBtn, card) {
 
             const property = document.createElement('p');
             propertyDiv.append(property);
-            // property.classList.add('extra-property');
             property.innerText = `${prop}: `
 
             const changeInput = document.createElement('input');
