@@ -21,3 +21,5 @@
 - Робота з gulp, створення файлу gulpfile.js.
 - Основна частина роботи з HTML/CSS.
 - Допоміжна частина роботи з JS.
+
+Дизайн проекту: [макет](https://www.figma.com/file/8huvIjGRCg7PdXa0SqDQZ9/SP-Cards?node-id=0-1&t=FGlcWyemmBTva7uA-0)
