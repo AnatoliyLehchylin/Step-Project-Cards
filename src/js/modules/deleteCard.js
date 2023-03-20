@@ -13,10 +13,8 @@ cards.addEventListener('click', async e => {
 
         await Loader(e.target.closest('.card-info').querySelector('.doctor-name'), 'DELETE CARD...');
 
-        // let status = await fetchDELETE(e.target.parentElement.parentElement.parentElement.dataset.id);
         let status = await fetchDELETE(e.target.closest('.card').dataset.id);
 
-        // status === 200 && e.target.parentElement.parentElement.parentElement.remove();
         status === 200 && setTimeout(removeCard, 2000, e.target.closest('.card'));
 
         //удаление карточки из массива актуальных карт (этот блок можно вообще убрать, т.к. при удалении карточка удаляется из отрисовки (не скрывается!), т.е. карточка останется в массиве актуальных карт до перезагрузки, но в любом случае не отрисуется после удаления)

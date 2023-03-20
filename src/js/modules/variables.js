@@ -29,3 +29,4 @@ export const filters = document.querySelector('.filters');//фильтры
 export const filterButton = document.querySelector('.filter-button');//кнопка фильтрации
 export const filterValue = filters.querySelectorAll('input');//значения в инпутах фильтрации
 export const urgencyFilterList = filters.querySelector('.urgency-filter');//список значений срочности визита на фильтре
+export const doctorFilterList = filters.querySelector('.doctor-filter');//список значений докторов на фильтре

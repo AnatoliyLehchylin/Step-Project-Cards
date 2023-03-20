@@ -1,17 +1,22 @@
-//Поиск работает только по одному заполненному фильтру
-//Поиск по срочности работает только если поля фильтров по "цели визита" и "доктору" пустые
-//Поиск по "цели визита" работает только если поле фильтра по "доктору" пустое
-//Поиск по "доктору" работает в любых комбинациях
+//Поиск адекватно работает только по одному заполненному фильтру!
 
 import {
     filterButton,
     filterValue,
-    urgencyFilterList
+    urgencyFilterList,
+    doctorFilterList
 } from "./variables.js";
 import {ShowFilterCard, ResetFilter} from "./showFilterCard.js";
 
 let filterName;//наименование фильтра
 let filterUsed = '';//значение фильтра
+
+doctorFilterList.addEventListener('click', e => {
+
+    filterName = "doctor";
+    filterUsed = e.target.value;
+
+});
 
 urgencyFilterList.addEventListener('click', e => {
 
@@ -35,6 +40,9 @@ filterButton.addEventListener('click', e => {
         });
         filterName = '';
         filterUsed = '';
+
+        doctorFilterList.value = '';
+        urgencyFilterList.value = '';
     } else {
         filterValue.forEach(elem => {
             if (!!elem.value) {
