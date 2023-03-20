@@ -72,7 +72,6 @@ urgencySelectList.addEventListener('click', e => {
 buttonCreate.addEventListener('click', e => {
 
     e.preventDefault();
-    // let objInfoVisit = {};//объект с введенной информацией о визите
 
     objInfoVisit.doctor = doctorSelect;
 

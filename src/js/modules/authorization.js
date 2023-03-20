@@ -48,7 +48,7 @@ buttonEntrySubmit.addEventListener('click', async e => {
 
         ShowAllCards();
 
-    } else error.innerText = 'Помилка у email або password!'
+    } else error.innerHTML = 'Помилка у email<br>або password!'
 })
 
 

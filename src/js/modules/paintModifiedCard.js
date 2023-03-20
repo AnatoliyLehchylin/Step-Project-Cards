@@ -26,12 +26,10 @@ export function PaintModifiedCard(obj, card) {
     const showMoreButton = document.createElement('button');
     moreInfo.append(showMoreButton);
     showMoreButton.classList.add('show-more-btn');
-    // showMoreButton.innerText = 'Показати більше';
 
     const editButton = document.createElement('button');
     moreInfo.append(editButton);
     editButton.classList.add('edit-btn');
-    // editButton.innerText = 'Редагувати';
 
     const deleteIcon = document.createElement('div');
     cardInfo.append(deleteIcon);
@@ -49,10 +47,22 @@ export function PaintModifiedCard(obj, card) {
 
     for (const prop in obj) {
         if (prop !== 'id' && prop !== 'doctor' && prop !== 'name') {
+
             const property = document.createElement('p');
             extraInfo.append(property);
             property.classList.add('extra-property');
-            property.innerText = `${prop}:  ${obj[prop]}`
+            property.style.display = 'flex';
+
+            const propName = document.createElement('span');
+            property.append(propName);
+            propName.classList.add('propName');
+            propName.innerText = `${prop}`;
+
+            const propValue = document.createElement('span');
+            property.append(propValue);
+            propValue.classList.add('propValue');
+            propValue.innerText = `:   ${obj[prop]}`;
+
         }
     }
 }
