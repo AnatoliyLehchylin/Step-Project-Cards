@@ -43,6 +43,10 @@ select {
   border: solid 0.5px #ecebf1;
   background-color: #f9f8fc;
   width: 130px;
+
+  @media (max-width: 400px) {
+    width: 105px;
+  }
 }
 
 .filters input[type='text'],
