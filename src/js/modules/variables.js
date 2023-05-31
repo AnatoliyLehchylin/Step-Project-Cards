@@ -7,7 +7,7 @@ export const buttonEntry = document.querySelector('.login-btn'); //кнопка 
 export const passwordForm = document.querySelector('.password-form'); //форма ввода почты и пароля
 export const inputsEmailPassword = passwordForm.querySelectorAll('input');//поля ввода почты и пароля
 export const buttonEntrySubmit = document.querySelector('.submit-btn');//кнопка подтверждения почты и пароля
-buttonEntrySubmit.disabled = true;
+buttonEntrySubmit.disabled = false;
 export const error = document.querySelector('.error');//если неправильно введена почта или пароль
 
 export const buttonCreateVisit = document.querySelector('.create-visit-btn');//кнопка создать визит

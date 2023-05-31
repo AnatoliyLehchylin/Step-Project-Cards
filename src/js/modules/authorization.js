@@ -9,9 +9,12 @@ import {
 import {ShowAllCards} from "./showAllCards.js";
 import {fetchLOGIN} from "./Fetch/fetchLOGIN.js";
 
-let emailInput;//введенная почта
-let passwordInput;//введенный пароль
+//Для теста, чтобы не вводить почту/пароль
+let emailInput = 'doc@t.com';//введенная почта
+let passwordInput = 'doc';//введенный пароль
 
+// let emailInput;//введенная почта
+// let passwordInput;//введенный пароль
 
 buttonEntry.addEventListener('click', e => {
 
